@@ -143,7 +143,7 @@ public class Climber extends SubsystemBase {
         SmartDashboard.putNumber("Climber Setpoint",m_pose);
         SmartDashboard.putNumber("Left Climber Current",getLeftCurrent());
         SmartDashboard.putNumber("Right Climber Current",getRightCurrent());
-                SmartDashboard.putNumber("Left Climber Pose",getLeftPose());
+        SmartDashboard.putNumber("Left Climber Pose",getLeftPose());
         SmartDashboard.putNumber("Right Climber Pose",getRightPose());
 
     }

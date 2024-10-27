@@ -92,8 +92,8 @@ public class RobotContainer {
     NamedCommands.registerCommand("AdjustByPose",
         new AdjustShotByPose(m_shooter, m_rackPinion, m_drive, m_poseEstimator::getPose));
     NamedCommands.registerCommand("ZeroClimber", new ZeroClimber(m_climber));
-    NamedCommands.registerCommand("Kickback", new InstantCommand(() -> m_feeder.setFeedVelo(-0.4))
-        .andThen(new WaitCommand(0.1)).andThen(new InstantCommand(() -> m_feeder.setFeedVelo(0.0))));
+    NamedCommands.registerCommand("Kickback", new InstantCommand(() -> m_feeder.setFeedVelo(-0.4)).alongWith(new InstantCommand(()->m_shooter.setShooterVelo(-500.0)))
+        .andThen(new WaitCommand(0.1)).andThen(new InstantCommand(() -> m_feeder.setFeedVelo(0.0))).alongWith(new InstantCommand(()-> m_shooter.setShooterVelo(0.0))));
     NamedCommands.registerCommand("AutoFeed", m_intake.runCmd(0.8)
         .alongWith(new InstantCommand(() -> m_feeder.setFeedVelo(50.0))));
     NamedCommands.registerCommand("PerpIntake",
@@ -243,8 +243,8 @@ public class RobotContainer {
 
     m_driverController.leftBumper()
         .whileTrue(m_intakeCommand.alongWith(new InstantCommand(() -> m_amp.setSpeed(-0.4))))
-        .onFalse(new InstantCommand(() -> m_feeder.setFeedVelo(-0.4))
-            .andThen(new WaitCommand(0.1)).andThen(new InstantCommand(() -> m_feeder.setFeedVelo(0.0)))
+        .onFalse(new InstantCommand(() -> m_feeder.setFeedVelo(-0.4)).alongWith(new InstantCommand(()-> m_shooter.setShooterVelo(-500.0)))
+            .andThen(new WaitCommand(0.1)).andThen(new InstantCommand(() -> m_feeder.setFeedVelo(0.0)).alongWith(new InstantCommand(()-> m_shooter.setShooterVelo(0.0))))
             .alongWith(new InstantCommand(() -> m_amp.setSpeed(0.0))));
 
     m_driverController.rightBumper()

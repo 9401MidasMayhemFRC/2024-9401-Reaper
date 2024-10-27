@@ -1,0 +1,76 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 8.281967377058862,
+        "y": 0.749493538930016
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 7.431566401594342,
+        "y": 0.5722826830269047
+      },
+      "isLocked": false,
+      "linkedName": "L3 1-3 End"
+    },
+    {
+      "anchor": {
+        "x": 4.1360075027842385,
+        "y": 2.6344737304859236
+      },
+      "prevControl": {
+        "x": 4.432015787108499,
+        "y": 2.318731560540044
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "L3A 1-4 End"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 0,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "TelePose"
+              }
+            },
+            {
+              "type": "named",
+              "data": {
+                "name": "Pipeline1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.25,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 360.0,
+    "maxAngularAcceleration": 270.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 143.98085640218727,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Source",
+  "previewStartingState": {
+    "rotation": 179.98319543108752,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}

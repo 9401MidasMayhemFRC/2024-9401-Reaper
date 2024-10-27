@@ -51,6 +51,7 @@ public class PoseEstimator extends SubsystemBase {
     public void periodic() {
         updatePoseEstimator(false);
         updateShuffleboard();
+        
     }
 
     private void updateWithNote(int noteID) {

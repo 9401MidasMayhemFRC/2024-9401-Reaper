@@ -11,7 +11,6 @@ public class DemoMode extends SubsystemBase{
 
     public DemoMode(){
         SmartDashboard.putBoolean("Demo Mode", m_enabled);
-        SmartDashboard.putBoolean("Kid Driving", m_kid);
     }
     
     public boolean isEnabled(){
@@ -23,7 +22,6 @@ public class DemoMode extends SubsystemBase{
  public void periodic() {
     
     m_enabled = SmartDashboard.getBoolean("Demo Mode", false);
-    m_kid = SmartDashboard.getBoolean("Kid Driving", false);
     if (m_kid && m_enabled){
         DriveConstants.kMaxSpeedMetersPerSecond = 1.5;
     } else {

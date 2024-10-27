@@ -1,0 +1,87 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 4.663318884412376,
+        "y": 6.45267093672561
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 5.831528836666802,
+        "y": 7.173775335282481
+      },
+      "isLocked": false,
+      "linkedName": null
+    },
+    {
+      "anchor": {
+        "x": 8.368946952691042,
+        "y": 5.703432886579377
+      },
+      "prevControl": {
+        "x": 6.998779076834604,
+        "y": 6.839384031520184
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": "H4 1-4 End"
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [],
+  "eventMarkers": [
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 0.25,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "TrackNote3"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 0.95,
+      "command": {
+        "type": "parallel",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "StopNoteTracking"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.25,
+    "maxAcceleration": 5.0,
+    "maxAngularVelocity": 360.0,
+    "maxAngularAcceleration": 270.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 130.0,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "High 3.5pc",
+  "previewStartingState": {
+    "rotation": -174.0,
+    "velocity": 0
+  },
+  "useDefaultConstraints": false
+}

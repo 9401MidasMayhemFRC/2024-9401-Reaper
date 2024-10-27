@@ -1,0 +1,104 @@
+{
+  "version": 1.0,
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 8.04775064614323,
+        "y": 4.11050362756931
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 4.752191747333125,
+        "y": 4.011834199461223
+      },
+      "isLocked": false,
+      "linkedName": "C 1-1"
+    },
+    {
+      "anchor": {
+        "x": 4.155741388405855,
+        "y": 4.775600320431411
+      },
+      "prevControl": {
+        "x": 4.6159975320935045,
+        "y": 4.343238488482405
+      },
+      "nextControl": {
+        "x": 3.8301322756491687,
+        "y": 5.081475547566481
+      },
+      "isLocked": false,
+      "linkedName": "Middle Point Centerline"
+    },
+    {
+      "anchor": {
+        "x": 1.9948809128387501,
+        "y": 4.8249350344854545
+      },
+      "prevControl": {
+        "x": 2.4783611105683763,
+        "y": 4.686797835134133
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [
+    {
+      "waypointRelativePos": 1.6,
+      "rotationDegrees": 180.0,
+      "rotateFast": true
+    }
+  ],
+  "constraintZones": [
+    {
+      "name": "New Constraints Zone",
+      "minWaypointRelativePos": 0.9,
+      "maxWaypointRelativePos": 1.25,
+      "constraints": {
+        "maxVelocity": 0.8,
+        "maxAcceleration": 5.0,
+        "maxAngularVelocity": 360.0,
+        "maxAngularAcceleration": 270.0
+      }
+    }
+  ],
+  "eventMarkers": [
+    {
+      "name": "New Event Marker",
+      "waypointRelativePos": 0.0,
+      "command": {
+        "type": "sequential",
+        "data": {
+          "commands": [
+            {
+              "type": "named",
+              "data": {
+                "name": "TelePose"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.25,
+    "maxAcceleration": 4.0,
+    "maxAngularVelocity": 360.0,
+    "maxAngularAcceleration": 270.0
+  },
+  "goalEndState": {
+    "velocity": 0,
+    "rotation": 161.0822330031347,
+    "rotateFast": false
+  },
+  "reversed": false,
+  "folder": "Centerline",
+  "previewStartingState": {
+    "rotation": 180.0,
+    "velocity": 0
+  },
+  "useDefaultConstraints": true
+}
